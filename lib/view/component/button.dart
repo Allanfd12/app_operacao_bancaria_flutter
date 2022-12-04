@@ -28,10 +28,12 @@ class _ButtonState extends State<Button> {
       onPressed: widget.onPressed,
       label:  Padding(
           padding: const EdgeInsets.all(10),
-          child: Text(
+          child: FittedBox(
+          fit: BoxFit.fitWidth,
+    child:Text(
             widget.text,
-            style: const TextStyle(fontSize: 20),
-          )),
+            style: const TextStyle(fontSize: 16),
+          )),),
       icon: widget.icon,
     );
   }
