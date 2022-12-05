@@ -11,8 +11,9 @@ class InputPassword extends StatefulWidget {
   final bool? readOnly;
   final TextEditingController? controller;
   final FormFieldSetter<String>? onSaved;
+  final FormFieldValidator<String>? validator;
   final GestureTapCallback? onTap;
-  const InputPassword({Key? key, required this.nomeCampo, this.textInputType, this.readOnly, this.textInputFormatter, this.maxLength, this.prefixo,  this.autofocus, this.controller, this.onSaved, this.onTap}) : super(key: key);
+  const InputPassword({Key? key, required this.nomeCampo, this.textInputType, this.readOnly, this.textInputFormatter, this.maxLength, this.prefixo,  this.autofocus, this.controller, this.onSaved, this.onTap, this.validator}) : super(key: key);
 
   @override
   _InputPasswordState createState() => _InputPasswordState();
@@ -33,6 +34,7 @@ class _InputPasswordState extends State<InputPassword> {
                 cursorColor: Theme.of(context).primaryColor,
                 readOnly: widget.readOnly == true,
                 onSaved: widget.onSaved,
+                validator: widget.validator,
                 onTap: widget.onTap,
                 controller: widget.controller,
                 autofocus: widget.autofocus == true,

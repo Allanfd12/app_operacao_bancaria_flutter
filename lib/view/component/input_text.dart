@@ -12,8 +12,9 @@ class InputText extends StatefulWidget {
   final bool? readOnly;
   final TextEditingController? controller;
   final FormFieldSetter<String>? onSaved;
+  final FormFieldValidator<String>? validator;
   final GestureTapCallback? onTap;
-  const InputText({Key? key, required this.nomeCampo, this.textInputType, this.readOnly, this.textInputFormatter, this.maxLength, this.prefixo, this.maxLines, this.autofocus, this.controller, this.onSaved, this.onTap}) : super(key: key);
+  const InputText({Key? key, required this.nomeCampo, this.textInputType, this.readOnly, this.textInputFormatter, this.maxLength, this.prefixo, this.maxLines, this.autofocus, this.controller, this.onSaved, this.onTap, this.validator}) : super(key: key);
 
   @override
   _InputTextState createState() => _InputTextState();
@@ -35,6 +36,7 @@ class _InputTextState extends State<InputText> {
                 cursorColor: Theme.of(context).primaryColor,
                 readOnly: widget.readOnly == true,
                 onSaved: widget.onSaved,
+                validator: widget.validator,
                 onTap: widget.onTap,
                 controller: widget.controller,
                 maxLines: widget.maxLines,

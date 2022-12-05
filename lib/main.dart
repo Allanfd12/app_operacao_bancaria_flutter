@@ -1,4 +1,3 @@
-import 'package:contas_bancarias/repository/firebase_repository.dart';
 import 'package:contas_bancarias/view/conta.dart';
 import 'package:contas_bancarias/view/deposito.dart';
 import 'package:contas_bancarias/view/home.dart';
@@ -21,10 +20,10 @@ Future<void> main() async {
     home: const Home(),
       initialRoute: "/",
       routes:{
-        "/conta": (context)=>const Conta(),
-        "/deposito": (context)=> const Deposito(),
-        "/transferencia": (context)=> const Transferencia(),
-        "/saque": (context)=> const Saque(),
+        "/conta": (context)=>Conta(),
+        "/deposito": (context)=> Deposito(),
+        "/transferencia": (context)=> Transferencia(),
+        "/saque": (context)=> Saque(),
       }
   ));
   await Firebase.initializeApp(
