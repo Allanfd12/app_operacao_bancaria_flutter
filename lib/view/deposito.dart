@@ -36,7 +36,7 @@ class _DepositoState extends State<Deposito> {
     conta.value = _valor('');
   }
 
-  void _Depositar() async{
+  void _depositar() async{
     if(esperandoResposta || _formKey.currentState == null) {
       return;
     }
@@ -123,7 +123,7 @@ class _DepositoState extends State<Deposito> {
                                 const EdgeInsets.only(left: 10,bottom: 10, right: 10),
                                 child: Button(text:"Depositar",
                                   icon: const Icon(Icons.monetization_on),
-                                  onPressed: _Depositar,
+                                  onPressed: _depositar,
                                 )
                             ))
                       ]),

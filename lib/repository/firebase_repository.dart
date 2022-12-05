@@ -28,8 +28,6 @@ class FirebaseRepository{
   }
   Future<void> salvarMovimento(Movimento movimento) async {
     if(movimento.origem != null){
-      DatabaseReference ref = firebase.ref("movimento/${movimento.origem}");
-      await ref.set(movimento.toJson());
 
       final ref2 = firebase.ref();
       final snapshot = await ref2.child('contas/${movimento.origem}/saldo').get();
@@ -37,17 +35,20 @@ class FirebaseRepository{
 
       double? saldo = double.tryParse(snapshot.value.toString());
       if( saldo == null) return;
-      if( saldo! <= movimento.valor!) return;
+      if( saldo! < movimento.valor!) return;
 
       saldo -= movimento.valor!;
+
+      DatabaseReference ref = firebase.ref("movimento/${movimento.origem}/${DateTime.now().millisecondsSinceEpoch}");
+      await ref.set(movimento.toJson());
+
       DatabaseReference ref3 = firebase.ref("contas/${movimento.origem}");
       await ref3.update({
         "saldo":saldo
       });
     }
     if(movimento.destino != null){
-      DatabaseReference ref = firebase.ref("movimento/${movimento.destino}");
-      await ref.set(movimento.toJson());
+
       final ref2 = firebase.ref();
       final snapshot = await ref2.child('contas/${movimento.destino}/saldo').get();
       if(!snapshot.exists) return;
@@ -56,6 +57,10 @@ class FirebaseRepository{
       if( saldo == null) return;
 
       saldo += movimento.valor!;
+
+      DatabaseReference ref = firebase.ref("movimento/${movimento.destino}/${DateTime.now().millisecondsSinceEpoch}");
+      await ref.set(movimento.toJson());
+
       DatabaseReference ref3 = firebase.ref("contas/${movimento.destino}");
       await ref3.update({
         "saldo":saldo

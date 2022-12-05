@@ -69,28 +69,29 @@ class _HomeState extends State<Home> {
                                   )
                               ))
                         ]),
-                        Row(children: [
+                        Row(children:  [
                           Expanded(
                               child: Padding(
                                   padding:
                                   const EdgeInsets.only(left: 10,bottom: 10, right: 10),
+                                  child: Button(text:"Saque de saldo",
+                                    icon: const Icon(Icons.output),
+                                    onPressed: _sacar,
+                                  )
+                              ))
+                        ]),
+                        Row(children: [
+                          Expanded(
+                              child: Padding(
+                                  padding:
+                                  const EdgeInsets.only(left: 10, right: 10),
                                   child: Button(text:"Transferência bancária",
                                     icon: const Icon(Icons.compare_arrows),
                                   onPressed: _transferir,
                                   )
                               ))
                         ]),
-                        Row(children:  [
-                          Expanded(
-                              child: Padding(
-                                  padding:
-                                  const EdgeInsets.only(left: 10, right: 10),
-                                  child: Button(text:"Saque de saldo",
-                                    icon: const Icon(Icons.output),
-                                  onPressed: _sacar,
-                                  )
-                              ))
-                        ]),
+
                         const SizedBox(
                           height: 40.0,
                         ),

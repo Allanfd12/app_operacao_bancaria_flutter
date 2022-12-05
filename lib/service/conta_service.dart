@@ -37,4 +37,7 @@ class ContaService{
   Future<bool> contaExiste(String codigoConta)async{
     return await db.contaExiste(codigoConta);
   }
+  Future<bool> contaTemSaldo(String codigoConta,double saque)async{
+    return await db.contaTemSaldo(codigoConta,saque);
+  }
 }
