@@ -5,6 +5,7 @@ import 'package:contas_bancarias/view/component/input_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
+import 'dart:math';
 class Conta extends StatefulWidget {
   const Conta({Key? key}) : super(key: key);
 
@@ -49,6 +50,11 @@ class _ContaState extends State<Conta> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    conta.value = valor((Random().nextInt(99999999)).toString());
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -87,6 +93,7 @@ class _ContaState extends State<Conta> {
                               nomeCampo: "Número Conta",
                               onSaved: (value) => print(value),
                               controller: conta,
+                              readOnly: true,
                             ),
                           ),
                           Expanded(
@@ -104,12 +111,13 @@ class _ContaState extends State<Conta> {
                         nomeCampo: "Senha",
                         controller: senha,
                         onSaved: (value) => print(value),
-                        maxLength: 20,
+                        maxLength: 4,
                       ),
                       InputPassword(
                         nomeCampo: "Confirmação de Senha",
                         controller: senhaConfirmacao,
                         onSaved: (value) => print(value),
+                        maxLength: 4,
                       ),
                       Row(children: [
                         Expanded(

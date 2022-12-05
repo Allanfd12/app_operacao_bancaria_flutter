@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "309504893881",
+    "firebase_url": "https://fir-test-9f3d7.firebaseio.com",
+    "project_id": "fir-test-9f3d7",
+    "storage_bucket": "fir-test-9f3d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309504893881:android:1e1a835e15987d2e440c68",
+        "android_client_info": {
+          "package_name": "com.example.bank.application.contas_bancarias"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309504893881-o5988n6mhjaade2tgpp8desrf3nkrn6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb6-yNiMuN5kPjnl4jkJDGnj-EhnAPHmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309504893881-o5988n6mhjaade2tgpp8desrf3nkrn6f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "309504893881-2b5idbnuut9htoidbpq1vmrkb2llhdnp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bank.application.contasBancarias"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309504893881:android:42ea62060915a89e440c68",
+        "android_client_info": {
+          "package_name": "com.example.firebasetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309504893881-hrk1bv648g3d3u5jpn6pjvk4babhhqfc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebasetest",
+            "certificate_hash": "a14af5dd7537845a95b9cf2ebcc6fa1a43aee923"
+          }
+        },
+        {
+          "client_id": "309504893881-o5988n6mhjaade2tgpp8desrf3nkrn6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb6-yNiMuN5kPjnl4jkJDGnj-EhnAPHmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309504893881-o5988n6mhjaade2tgpp8desrf3nkrn6f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "309504893881-2b5idbnuut9htoidbpq1vmrkb2llhdnp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.bank.application.contasBancarias"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
