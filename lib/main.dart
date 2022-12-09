@@ -13,7 +13,7 @@ import 'model/conta_bancaria.dart';
 Future<void> main() async {
   runApp( MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: "TIVIC Bank",
+    title: "A Bank",
     theme: ThemeData(
       primaryColor: const Color(0xff3c5d97)
     ),

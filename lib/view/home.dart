@@ -39,7 +39,7 @@ class _HomeState extends State<Home> {
                     margin: const EdgeInsets.only(bottom: 30),
                     child: Image.asset(
                       'images/logo.png',
-                      height: 100,
+                      height: 200,
                       fit: BoxFit.contain,
                     ),
                   ),
